@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishr – Support & Privacy Policy</title>
+    <meta name="description" content="Support and Privacy Policy for Dishr – AI Recipe Discovery from Your Ingredients.">
+    <style>
+        :root {
+            --bg: #121212;
+            --bg-card: #1e1e1e;
+            --primary: #4ade80;
+            --primary-dim: rgba(74, 222, 128, 0.15);
+            --text: #ffffff;
+            --text-secondary: #8e8e93;
+            --border: #2c2c2e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 20px 60px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            font-size: 56px;
+            margin-bottom: 12px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header .tagline {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            background: var(--bg-card);
+            padding: 4px;
+            border-radius: 12px;
+        }
+
+        .nav-tabs a {
+            flex: 1;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-tabs a:hover,
+        .nav-tabs a.active {
+            background: var(--primary-dim);
+            color: var(--primary);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2 .icon {
+            font-size: 22px;
+        }
+
+        .card p,
+        .card li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .card p:last-child,
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card ul li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .card ul li strong {
+            color: var(--text);
+        }
+
+        .card a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Button */
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 14px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(74, 222, 128, 0.3);
+            text-decoration: none;
+        }
+
+        /* Section Headers */
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            padding-top: 8px;
+        }
+
+        .date-label {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+
+        /* Privacy specific */
+        .privacy-section h2 {
+            color: var(--primary);
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .privacy-section p {
+            color: var(--text-secondary);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 4px;
+        }
+
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .data-table th {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table td {
+            color: var(--text-secondary);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 16px 48px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 8px 6px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">🍽️</div>
+            <h1>Dishr</h1>
+            <p class="tagline">AI Recipe Discovery from Your Ingredients</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <a href="#support" class="active" onclick="showSection('support')">Support</a>
+            <a href="#privacy" onclick="showSection('privacy')">Privacy Policy</a>
+        </nav>
+
+        <!-- ============================================ -->
+        <!-- SUPPORT SECTION -->
+        <!-- ============================================ -->
+        <div id="support-section">
+            <div class="card">
+                <h2><span class="icon">📧</span> Contact Support</h2>
+                <p>Having issues or questions about Dishr? We're here to help!</p>
+                <a href="mailto:fechtech.dev@gmail.com" class="contact-btn">✉️ Email Us</a>
+            </div>
+
+            <div class="card">
+                <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+                <ul>
+                    <li>
+                        <strong>How do I scan my ingredients?</strong><br>
+                        Tap the camera button on the home screen and point your camera at your ingredients. Dishr's AI will automatically recognize them.
+                    </li>
+                    <li>
+                        <strong>How does the AI generate recipes?</strong><br>
+                        After scanning your ingredients, tap "Generate Recipes". Our AI analyzes what you have and creates personalized recipe suggestions based on your dietary preferences and allergies.
+                    </li>
+                    <li>
+                        <strong>Can I upload photos from my gallery?</strong><br>
+                        Yes! Tap the photo gallery icon next to the camera button to select an existing photo of your ingredients.
+                    </li>
+                    <li>
+                        <strong>How many free scans do I get?</strong><br>
+                        Free users get 3 ingredient scans and 3 recipe generations per week (resetting every Monday), plus the ability to save up to 4 recipes. Dishr Pro removes all limits.
+                    </li>
+                    <li>
+                        <strong>How do I restore my purchase?</strong><br>
+                        Go to Settings → Restore Purchases. Your subscription will be restored automatically.
+                    </li>
+                    <li>
+                        <strong>How do I manage or cancel my subscription?</strong><br>
+                        Subscriptions are managed through your Apple ID. Go to iPhone Settings → Your Name → Subscriptions → Dishr Pro.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- PRIVACY POLICY SECTION -->
+        <!-- ============================================ -->
+        <div id="privacy-section" style="display: none;">
+            <p class="date-label">Last updated: February 7, 2026</p>
+
+            <div class="card privacy-section">
+                <h2>1. Overview</h2>
+                <p>Dishr ("we", "us", "the app") is committed to protecting your privacy. This privacy policy explains how we collect, use, and protect your information in accordance with the General Data Protection Regulation (GDPR) and other applicable data protection laws.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>2. Controller (Art. 4 No. 7 GDPR)</h2>
+                <p>
+                    <strong>FechTech</strong><br>
+                    Christoph Andreas Fechter<br>
+                    Geheimrat-Frank-Straße 1<br>
+                    94566 Riedlhütte<br>
+                    Germany<br>
+                    E-Mail: <a href="mailto:fechtech.dev@gmail.com">fechtech.dev@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>3. Data We Collect</h2>
+                <p>We collect the minimum data necessary to provide and improve Dishr's functionality:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Purpose</th>
+                            <th>Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ingredient Photos</strong></td>
+                            <td>Sent to Google Gemini AI for ingredient recognition</td>
+                            <td>Processed in real-time, not stored on servers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Usage Counters</strong></td>
+                            <td>Tracking weekly scans, recipe generations, and saved recipe counts to enforce free-tier limits</td>
+                            <td>Google Firebase Firestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Device Identifier</strong></td>
+                            <td>Identifying anonymous users for usage tracking</td>
+                            <td>Apple's identifierForVendor; stored in Firestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anonymous User ID</strong></td>
+                            <td>Linking usage data to authenticated accounts</td>
+                            <td>Firebase Authentication</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subscription Status</strong></td>
+                            <td>Determining premium access</td>
+                            <td>RevenueCat & Firebase Firestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analytics Data</strong></td>
+                            <td>Understanding app usage patterns to improve the experience</td>
+                            <td>Firebase Analytics (anonymous)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Crash Reports</strong></td>
+                            <td>Identifying and fixing bugs</td>
+                            <td>Firebase Crashlytics</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>4. Data Stored Locally Only</h2>
+                <p>The following data is stored exclusively on your device and is <strong>never transmitted</strong> to any server:</p>
+                <ul>
+                    <li><strong>Dietary preferences</strong> (e.g., Vegan, Keto, Halal)</li>
+                    <li><strong>Allergy information</strong> (e.g., Peanuts, Gluten)</li>
+                    <li><strong>Excluded ingredients</strong></li>
+                    <li><strong>Saved recipes and images</strong></li>
+                    <li><strong>Onboarding completion status</strong></li>
+                </ul>
+                <p>This data is stored using iOS UserDefaults and remains under your full control.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>5. AI Processing</h2>
+                <p>Dishr uses Google's Gemini AI (via Firebase AI Logic) for two purposes:</p>
+                <ul>
+                    <li><strong>Ingredient Recognition:</strong> Your ingredient photos are sent to Google Gemini for analysis. Photos are processed to generate results and are not retained by us.</li>
+                    <li><strong>Recipe Generation:</strong> Text-based prompts (including your ingredient list and dietary preferences) are sent to generate recipe suggestions. These prompts are processed and not stored.</li>
+                </ul>
+                <p>AI processing is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>6. Third-Party Services</h2>
+                <p>Dishr integrates the following third-party services, each operating under their own privacy policies:</p>
+                <ul>
+                    <li><strong>Firebase (Google)</strong> — Analytics, Crashlytics, Firestore, Authentication, App Check<br><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+                    <li><strong>RevenueCat</strong> — Subscription management and in-app purchase processing<br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></li>
+                    <li><strong>Apple</strong> — App Store, In-App Purchases, and StoreKit services<br><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>7. Legal Basis (Art. 6 GDPR)</h2>
+                <p>We process your data based on the following legal grounds:</p>
+                <ul>
+                    <li><strong>Contract Performance (Art. 6(1)(b)):</strong> Processing ingredient photos and generating recipes is necessary to provide the core service.</li>
+                    <li><strong>Legitimate Interest (Art. 6(1)(f)):</strong> Analytics and crash reporting help us maintain and improve app quality.</li>
+                    <li><strong>Consent (Art. 6(1)(a)):</strong> Where required, we obtain your consent before processing (e.g., camera access).</li>
+                </ul>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>8. Data Retention</h2>
+                <p>Usage tracking data is retained in Firestore for as long as you use the app. Weekly counters (scans, generations) reset automatically every Monday. Analytics and crash data are retained according to Firebase's standard retention policies (typically 14 months for Analytics).</p>
+                <p>Locally stored data (recipes, preferences) persists until you delete the app or clear its data.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>9. Data Security</h2>
+                <p>We implement appropriate measures to protect your data:</p>
+                <ul>
+                    <li>Firebase App Check (with DeviceCheck) ensures only the legitimate Dishr app can access our backend services.</li>
+                    <li>All network communication uses encrypted connections (HTTPS/TLS).</li>
+                    <li>Local data is stored using iOS secure storage mechanisms.</li>
+                    <li>Firestore security rules restrict data access to the authenticated user.</li>
+                </ul>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>10. Your Rights (Art. 15–21 GDPR)</h2>
+                <p>As a user in the European Union, you have the following rights:</p>
+                <ul>
+                    <li><strong>Right of Access (Art. 15):</strong> Request information about your stored data.</li>
+                    <li><strong>Right to Rectification (Art. 16):</strong> Request correction of inaccurate data.</li>
+                    <li><strong>Right to Erasure (Art. 17):</strong> Request deletion of your data.</li>
+                    <li><strong>Right to Restriction (Art. 18):</strong> Request limited processing of your data.</li>
+                    <li><strong>Right to Data Portability (Art. 20):</strong> Receive your data in a machine-readable format.</li>
+                    <li><strong>Right to Object (Art. 21):</strong> Object to data processing based on legitimate interest.</li>
+                </ul>
+                <p>To exercise any of these rights, please contact us at <a href="mailto:fechtech.dev@gmail.com">fechtech.dev@gmail.com</a>.</p>
+                <p>You also have the right to lodge a complaint with a supervisory authority, in particular in the EU member state of your habitual residence.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>11. Children's Privacy</h2>
+                <p>Dishr is not directed at children under 16 years of age. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us so we can take appropriate action.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>12. Changes to This Policy</h2>
+                <p>We may update this privacy policy from time to time. Changes will be reflected by updating the "Last updated" date at the top. We encourage you to review this page periodically.</p>
+            </div>
+
+            <div class="card privacy-section">
+                <h2>13. Contact</h2>
+                <p>If you have any questions about this privacy policy or our data practices, please contact:</p>
+                <p>
+                    <strong>FechTech</strong><br>
+                    Christoph Andreas Fechter<br>
+                    Geheimrat-Frank-Straße 1<br>
+                    94566 Riedlhütte, Germany<br>
+                    <a href="mailto:fechtech.dev@gmail.com">fechtech.dev@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 FechTech. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(section) {
+            const supportSection = document.getElementById('support-section');
+            const privacySection = document.getElementById('privacy-section');
+            const tabs = document.querySelectorAll('.nav-tabs a');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            if (section === 'support') {
+                supportSection.style.display = 'block';
+                privacySection.style.display = 'none';
+                tabs[0].classList.add('active');
+            } else {
+                supportSection.style.display = 'none';
+                privacySection.style.display = 'block';
+                tabs[1].classList.add('active');
+            }
+        }
+
+        // Handle direct navigation via URL hash
+        if (window.location.hash === '#privacy') {
+            showSection('privacy');
+        }
+    </script>
+</body>
+</html>
